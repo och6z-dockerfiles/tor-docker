@@ -1,1 +1,10 @@
 * Tor on Docker Engine
+** Docker commands
+*** Build tagged image in local directory
+#+BEGIN_SRC sh
+$ docker build -t new-image-name:image-tag .
+#+END_SRC
+*** Create and run automatically removable container
+#+BEGIN_SRC sh
+$ docker container run --rm -ti --name new-container-name image-id
+#+END_SRC
