@@ -9,9 +9,17 @@ $ docker build -t new-image-name:image-tag .
 $ docker container run --rm -ti --name new-container-name image-id
 #+END_SRC
 ** Tor commands
-*** Start the process in the background
+*** Start Tor process
+#+BEGIN_SRC sh
+$ tor &
+#+END_SRC
+*** Start Tor process in the background
 #+BEGIN_SRC sh
 $ tor --runasdaemon 1
+#+END_SRC
+*** Application use only Tor for internet connectivity
+#+BEGIN_SRC sh
+$ torify command
 #+END_SRC
 *** Set current shell in Tor mode
 #+BEGIN_SRC sh
