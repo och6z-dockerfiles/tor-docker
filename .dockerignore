@@ -64,3 +64,6 @@ flycheck_*.el
 ## Docker
 .dockerignore
 Dockerfile
+
+## GitHub
+README.org
