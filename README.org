@@ -8,3 +8,12 @@ $ docker build -t new-image-name:image-tag .
 #+BEGIN_SRC sh
 $ docker container run --rm -ti --name new-container-name image-id
 #+END_SRC
+** Tor commands
+*** Start the process in the background
+#+BEGIN_SRC sh
+$ tor --runasdaemon 1
+#+END_SRC
+*** Set current shell in Tor mode
+#+BEGIN_SRC sh
+$ . torsocks on
+#+END_SRC
