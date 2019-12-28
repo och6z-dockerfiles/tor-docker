@@ -1,4 +1,9 @@
 * Tor on Docker Engine
+** CLI commands
+*** Set an environment variable to use BuildKit backend
+#+BEGIN_SRC sh
+$ export DOCKER_BUILDKIT=1
+#+END_SRC
 ** Docker commands
 *** Build tagged image in local directory without cache
 #+BEGIN_SRC sh
