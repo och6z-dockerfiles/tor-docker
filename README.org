@@ -1,8 +1,8 @@
 * Tor on Docker Engine
 ** Docker commands
-*** Build tagged image in local directory
+*** Build tagged image in local directory without cache
 #+BEGIN_SRC sh
-$ docker build -t new-image-name:image-tag .
+$ docker build --no-cache -t new-image-name:image-tag .
 #+END_SRC
 *** Create and run automatically removable container
 #+BEGIN_SRC sh
