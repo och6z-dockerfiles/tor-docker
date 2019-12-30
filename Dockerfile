@@ -19,6 +19,10 @@ RUN apt-get update \
     && curl https://${TOR_DEB}/torproject.org/${TOR_KEY}.asc | gpg --import \
     && gpg --export ${TOR_KEY} | apt-key add - \
     && apt-get update -y \
-    && apt-get install -y tor ${TOR_DEB}-keyring && apt-get remove -y gnupg && rm -rf root/.gnupg \
+    && apt-get install -y tor ${TOR_DEB}-keyring nyx && apt-get remove -y gnupg && rm -rf root/.gnupg \
     && apt-get purge -y && apt-get autoremove -y && apt-get autoclean -y \
     && rm -rf /var/lib/apt/lists/*
+
+COPY torrc.default /etc/tor/torrc.default
+RUN cp --backup /etc/tor/torrc.default /etc/tor/torrc \
+    && rm -rf /etc/tor/torrc.default
