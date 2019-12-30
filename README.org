@@ -13,6 +13,10 @@ $ docker build --no-cache -t new-image-name:image-tag .
 #+BEGIN_SRC sh
 $ docker container run --rm -ti --name new-container-name image-id
 #+END_SRC
+*** Run Bash in running container
+#+BEGIN_SRC sh
+$ docker container exec -it container-id /bin/bash
+#+END_SRC
 ** Tor commands
 *** Start Tor process
 #+BEGIN_SRC sh
