@@ -1,17 +1,13 @@
 * Tor on Docker Engine
 ** CLI commands
-*** Set an environment variable to use BuildKit backend
-#+BEGIN_SRC sh
-$ export DOCKER_BUILDKIT=1
-#+END_SRC
 ** Docker commands
 *** Build tagged image in local directory without cache
 #+BEGIN_SRC sh
-$ docker build --no-cache -t new-image-name:image-tag .
+$ docker build --no-cache --build-arg DEBIAN_VERSION=stable-slim --file Dockerfile . --tag image-name:latest
 #+END_SRC
-*** Create and run automatically removable container
+*** Create and run automatically container
 #+BEGIN_SRC sh
-$ docker container run --rm -ti --name new-container-name image-id
+$ docker container run -ti --name new-container-name image-id
 #+END_SRC
 *** Run Bash in running container
 #+BEGIN_SRC sh
