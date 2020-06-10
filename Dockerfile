@@ -1,6 +1,6 @@
-ARG CODE_VERSION=stable-slim
+ARG DEBIAN_VERSION
 
-FROM debian:${CODE_VERSION}
+FROM debian:${DEBIAN_VERSION}
 
 ENV TOR_DEB deb.torproject.org
 ENV TOR_KEY A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89
@@ -23,6 +23,9 @@ RUN apt-get update \
     && apt-get purge -y && apt-get autoremove -y && apt-get autoclean -y \
     && rm -rf /var/lib/apt/lists/*
 
+EXPOSE 9050
+
 COPY torrc.default /etc/tor/torrc.default
+
 RUN cp --backup /etc/tor/torrc.default /etc/tor/torrc \
     && rm -rf /etc/tor/torrc.default
