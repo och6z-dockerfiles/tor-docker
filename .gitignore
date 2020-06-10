@@ -27,7 +27,7 @@
 # .nfs files are created when an open file is removed but is still being accessed
 .nfs*
 
-## Emacs
+### Emacs ###
 # -*- mode: gitignore; -*-
 *~
 \#*\#
@@ -45,8 +45,18 @@ tramp
 # flymake-mode
 *_flymake.*
 
+# eshell files
+/eshell/history
+/eshell/lastdir
+
 # elpa packages
 /elpa/
+
+# reftex files
+*.rel
+
+# AUCTeX auto folder
+/auto/
 
 # cask packages
 .cask/
@@ -54,6 +64,12 @@ dist/
 
 # Flycheck
 flycheck_*.el
+
+# server auth directory
+/server/
+
+# projectiles files
+.projectile
 
 # directory configuration
 .dir-locals.el
