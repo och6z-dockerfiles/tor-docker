@@ -14,7 +14,7 @@ docker build \
 docker container run \
     --interactive \
     --tty \
-    --name container-name och6z/test
+    --name container-name och6z/tor
 ```
 ### Run Bash in running container
 ```bash
