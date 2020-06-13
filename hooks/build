@@ -1,0 +1,7 @@
+#!/bin/bash
+
+docker build \
+    --no-cache \
+    --build-arg DEBIAN_VERSION=stable-slim \
+    --file $DOCKERFILE_PATH \
+    --tag $IMAGE_NAME .
